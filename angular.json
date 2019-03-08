@@ -17,13 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-basics",
-            "index": "src/index.html",
+            "outputPath": "dist/build-files",
+            "index": "index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "styles": [
-              "src/styles.scss"
-            ],
+            "tsConfig": "tsconfig.json",
             "scripts": [],
             "es5BrowserSupport": true
           }
@@ -37,13 +34,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
